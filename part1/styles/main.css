@@ -1,1 +1,117 @@
-@import url(reset.css)
+@import url(reset.css);
+
+/******************
+Eggshell: #f4f1de
+Burnt Sienna : #e07a5f
+Delft Blue: #3d405b
+Cambridge Blue #81b29a
+Sunset: #f2cc8f
+******************/
+
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+    /* defining color properties */
+    --light-one: #f4f1de;
+    --light-two: #f2cc8f;
+    --dark-one: #3d405b;
+    --dark-two: #81b29a;
+    --dark-three: #e07a5f;
+  }
+  
+  body {
+    /* make the body fill the viewport at minimum */
+    min-height: 100vh;
+  
+    /** make the body a grid container here**/
+    display: grid;
+  
+    /* defined the rows and columns for our layout grid  */
+    grid-template-columns: 1fr 15em; /*all the space, fixed*/
+    grid-template-rows: auto 1fr auto; /*fixed,fixed, all the space, based on content*/
+  
+    /** define the necessary grid template areas for our layout **/
+    grid-template-areas:
+    "nav nav"
+    "main main"
+    /* "header header " */
+    /* "main aside " */
+    "footer footer";
+  
+  
+  
+  
+  }
+  
+  /*###############################################
+      Nav Section
+  ################################################*/
+  nav {
+      grid-area: nav;
+      background-color: #81b29a ;
+      padding: 1em;
+  
+    }
+  
+  
+  
+  nav ul {
+  
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      
+  
+  
+    }
+  
+  nav a {
+      text-decoration: none;
+      padding: 0.25em;
+      margin: 0.5em;
+      background-color: var(--light-two);
+      color: var(--dark-one);
+  
+      
+      
+  }
+  
+  nav ul li:first-child {
+      margin-right: auto;
+  }
+  
+  nav a:visited {
+  
+      color: var(--dark-three);
+  
+    
+    }
+  
+  main {
+      grid-area: main;
+      background-color: #050f1f;
+      display:flex ;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  
+  main h1 {
+      font-size: 3em;
+      padding: 0.15em 0.75em;
+      
+    
+    }
+    
+    main p {
+      padding:  1em 4em;
+      color: #ffffff;
+      font-weight: bold;
+    }
+  
+  /* Add style rules (with selectors) for styling a and visited a in
+  the nav here */
+  
+  
