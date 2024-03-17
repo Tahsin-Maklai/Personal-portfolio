@@ -47,6 +47,10 @@ Sunset: #f2cc8f
       Nav Section
   ################################################*/
   nav {
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
       grid-area: nav;
       background-color: #81b29a ;
       padding: 1em;
@@ -67,6 +71,8 @@ Sunset: #f2cc8f
     }
   
   nav a {
+      position: relative;
+
       text-decoration: none;
       padding: 0.25em;
       margin: 0.5em;
@@ -95,15 +101,18 @@ Sunset: #f2cc8f
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      overflow-y: scroll;
+      
+      
   }
   
   
   main #home h1 {
+      
       font-size: 3em;
       padding: 0.15em 0.75em;
       color: teal;
       text-align: center;
+      margin-top: 5em;
       
     
     }
@@ -112,27 +121,84 @@ Sunset: #f2cc8f
       padding:  1em 4em;
       color: #ffffff;
       font-weight: bold;
+      margin-bottom: 35em;
+      
     }
 
     main #aboutMe {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 3em;
+      border:10em;
+      align-items: center;
+
     
     
     }
 
+    
+  
+
     main #aboutMe h1 {
+      text-align: center;
       grid-column: 1 / span 2;
-      color: palevioletred;
+      color: rgb(212, 15, 81);
+      font-size: 2em;
+      border-bottom: 3em;
     
     
     }
     
     main #aboutMe p {
       grid-column: 2;
+      margin-bottom: 20em;
+      color: white;
+
+
     }
+
+    main #aboutMe img {
+     
+
+      width: 20em;
+      height: 30em;
+      border-radius: 3em;
+      justify-self: center;
+
+
+    }
+
+    @media (max-width: 50em) {
+      main #aboutMe {
+        display: grid;
+        grid-template-columns: 1fr; /* Set to a single column */
+        grid-gap: 1em; /* Adjust grid gap for smaller screens */
+        border: 0; /* Remove border for smaller screens */
+      }
     
+      main #aboutMe h1 {
+        grid-column: auto; 
+        border-bottom: none; 
+      }
+    
+      main #aboutMe p {
+        grid-column: auto;
+        margin-bottom: 2em; }
+
+      main #aboutMe img {
+     
+
+        width: 25em;
+        height: 30em;
+        border-radius: 3em;
+        justify-self: center;
+  
+  
+      }}
+    
+    
+
+
 
   
   /* Add style rules (with selectors) for styling a and visited a in
