@@ -9,5 +9,5 @@ function pyramid(number){
     }
     return pyramid
 }
-const result = pyramid(5);
+const result = pyramid(3);
 result.forEach(level => console.log(level))

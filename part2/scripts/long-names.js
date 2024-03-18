@@ -1,4 +1,4 @@
-const names = ['jane', 'alexanderthegreat', 'tahsinmaklaithegreat', 'christopher'];
+const names = ['jane', 'alexander', 'tahsinmaklai', 'christopher'];
 const newStr = [];
 
 function filterNames(namesArray) {
