@@ -17,6 +17,13 @@ Sunset: #f2cc8f
     --dark-one: #3d405b;
     --dark-two: #81b29a;
     --dark-three: #e07a5f;
+    --extra1:#ccc;
+    --white:white;
+    --pink:rgb(212, 15, 81);
+    --white2:#ffffff;
+    --teal-heading:#81b29a;
+    --background:#050f1f;
+    --crimson:crimson;
   }
   
   body {
@@ -51,7 +58,7 @@ Sunset: #f2cc8f
       z-index: 1000;
       width: 100%;
       grid-area: nav;
-      background-color: #81b29a ;
+      background-color: var(--teal-heading) ;
       padding: 1em;
   
     }
@@ -92,10 +99,14 @@ Sunset: #f2cc8f
   
     
     }
+
+  nav a:hover{
+    color: var(--crimson);
+  }
   
   main {
       grid-area: main;
-      background-color: #050f1f;
+      background-color: var(--background);
       display:flex ;
       flex-direction: column;
       justify-content: center;
@@ -109,7 +120,7 @@ Sunset: #f2cc8f
       
       font-size: 3em;
       padding: 0.15em 0.75em;
-      color: teal;
+      color: var(--teal-heading);
       text-align: center;
       margin-top: 5em;
       
@@ -118,7 +129,7 @@ Sunset: #f2cc8f
     
     main #home p {
       padding:  1em 4em;
-      color: #ffffff;
+      color: var(--white2);
       font-weight: bold;
       margin-bottom: 35em;
       text-align: center;
@@ -158,7 +169,7 @@ Sunset: #f2cc8f
     main #aboutMe h1 {
       text-align: center;
       grid-column: 1 / span 2;
-      color: rgb(212, 15, 81);
+      color: var(--pink);
       font-size: 2em;
       border-bottom: 3em;
     
@@ -168,7 +179,7 @@ Sunset: #f2cc8f
     main #aboutMe p {
       grid-column: 2;
       margin-bottom: 5em;
-      color: white;
+      color: var(--white);
 
 
     }
@@ -219,22 +230,26 @@ Sunset: #f2cc8f
         border-collapse: collapse;
         margin-top: 2em;
         margin-bottom: 15em;
+        font-size: 1em;
     }
     
     th, td {
-        border: 1px solid #ccc;
-        padding: 12px;
+        border: 1em solid var(--extra1);
+        padding: 1em;
         text-align: left;
     }
     
     th {
-        background-color: #f2cc8f;
-        color: #3d405b;
+        background-color: var(--light-two);
+        color: var(--dark-one);
     }
     
     tr:nth-child(even) {
-        background-color: #f4f1de;
+        background-color: var(--light-one);
     }
+    tr:nth-child(odd) {
+      background-color: var(--dark-three);
+  }
     
     /* Section Styles */
     section#projects {
@@ -242,12 +257,12 @@ Sunset: #f2cc8f
     }
     
     /* Responsive Styles */
-    @media (max-width: 768px) {
+    @media (max-width: 48em) {
         table {
-            font-size: 14px;
+            font-size: 1.5em;
         }
         th, td {
-            padding: 8px;
+            padding: 1.5em;
         }
     }
 
