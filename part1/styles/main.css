@@ -34,8 +34,7 @@ Sunset: #f2cc8f
     grid-template-areas:
     "nav nav"
     "main main"
-    /* "header header " */
-    /* "main aside " */
+
     "footer footer";
   
   
@@ -126,8 +125,23 @@ Sunset: #f2cc8f
       
     }
 
+    main #aboutMe a {
+      
+      text-decoration: none;    
+      align-items: center;
+      justify-content: center;
+      background-color: var(--light-two);
+      color: var(--dark-one);
+      margin-bottom: 35em;
+
+      
+      
+      
+    }
+
     main #aboutMe {
       display: grid;
+      
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 3em;
       border:10em;
@@ -198,68 +212,48 @@ Sunset: #f2cc8f
   
   
       }}
-
-      main #project{
-        display: flex;
-        flex-direction: column;
-        max-width: 762em;
-        padding: 5em;
-
-      
-
-
+      table {
         
-      }
-
-      main #project h1{
-        font-size: 3em;
-        font-weight: bold;
-
-
-      }
-      main #project .project-item,main #project .project-info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        border-radius: 2em;
-        padding: 2em;
-        background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-        color: white;
-        margin-bottom: 2em;
-      }
-
-      
-
-      main #project .project-info h1{
-        font-size: 3em;
-        font-weight: bold;
+        width: 150vh;
+        
+        border-collapse: collapse;
         margin-top: 2em;
+        margin-bottom: 15em;
+    }
+    
+    th, td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #f2cc8f;
+        color: #3d405b;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f4f1de;
+    }
+    
+    /* Section Styles */
+    section#projects {
+        margin-top: 3em;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        table {
+            font-size: 14px;
+        }
+        th, td {
+            padding: 8px;
+        }
+    }
+
+     
 
 
-      }
-
-      main #project .project-info h2{
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-top: 2em;
-
-
-      }
-
-      main #project .project-info p{
-        color: white;
-
-      }
-
-      main #project .project-image {
-        width: 25em;
-        height: 30em;
-        border-radius: 3em;
-        justify-self: center;
-
-
-      }
 
 
 
