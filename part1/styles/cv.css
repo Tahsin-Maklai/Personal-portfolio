@@ -1,0 +1,96 @@
+@import url(reset.css);
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body .background{
+    background-image: url(../images/table\ 2.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    
+
+
+
+}
+
+body #part1 .content {
+    background-color: whitesmoke;
+    padding: 0;
+    border-radius: 1.25em;
+    max-width: 60em;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+body #part1 .content img {
+    width: 15em;
+    height: 15em;
+    float: left;
+    margin-right: auto;
+    border-radius: 3em;
+    margin-right: auto;
+}
+body #part1 .content .part1 {
+    display: grid; /* Use grid layout */
+    grid-template-columns: auto 1fr auto; /* Three columns: auto for left space, 1fr for flexible center space, auto for right space */
+    grid-column-gap: 8em; /* Add space between grid columns */
+    align-items: center; /* Center vertically */
+}
+
+
+    
+
+body #part1 .part1{
+    flex: 1;
+}
+
+body #part1 .part2{
+    flex: 1;
+}
+
+
+body #part1 .columns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.01em;
+    background-color: beige;
+    height: 100%;
+   
+    padding: 0;
+
+}
+body #part1 .columns .column{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+body #part1 .part2 .columns .column:nth-child(1) {
+    background-color: red;
+}
+
+body #part1 .part2 .columns .column:nth-child(2) {
+    background-color: green;
+}
+
+body #part1 .part2 .columns .column:nth-child(3) {
+    background-color: blue;
+}
+
+
+
+
+
