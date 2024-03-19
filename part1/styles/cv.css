@@ -1,5 +1,5 @@
 @import url(reset.css);
-
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
 body, html {
     margin: 0;
     padding: 0;
@@ -22,6 +22,7 @@ body .background{
 }
 
 body #part1 .content {
+    padding: 0.5em;
     background-color: whitesmoke;
     padding: 0;
     border-radius: 1.25em;
@@ -50,11 +51,36 @@ body #part1 .content .part1 {
 }
 
 
+
     
 
 body #part1 .part1{
     flex: 1;
 }
+
+body #part1 .content .part1 h1 {
+    font-size: 1em; 
+    color: purple; 
+}
+
+body #part1 .content .part1 h1 span{
+    font-size: 2em; 
+    color: deeppink; 
+}
+
+body #part1 .content .part1 p {
+    font-size: 1em; 
+    color: purple; 
+}
+
+body #part1 .content .part1 span:first-of-type {
+    font-size: 3em;
+}
+body #part1 .content .part1 span:last-of-type {
+    color: deeppink; 
+}
+
+
 
 body #part1 .part2{
     flex: 1;
@@ -64,7 +90,7 @@ body #part1 .part2{
 body #part1 .columns{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.01em;
+    gap: 0.5em;
     background-color: beige;
     height: 100%;
    
@@ -72,25 +98,58 @@ body #part1 .columns{
 
 }
 body #part1 .columns .column{
+    font-family: 'literata', sans-serif;
     padding: 0;
     margin: 0;
+    border-radius: 3em;
 }
+
+body #part1 .columns .column h3{
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+body #part1 .columns .column ul{
+    list-style-type: disc;
+    padding: 1.5em;
+}
+
+
 
 
 
 body #part1 .part2 .columns .column:nth-child(1) {
-    background-color: red;
+    
+    background-color: #333333 ;
+    padding: 5em;
+    
 }
 
 body #part1 .part2 .columns .column:nth-child(2) {
-    background-color: green;
+    background-color: #D2B48C ;
+    padding: 3em;
+    
 }
 
 body #part1 .part2 .columns .column:nth-child(3) {
-    background-color: blue;
+    background-color: #2C3E50;
+    
 }
 
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+img {
+    animation: floatIn 1.5s ease forwards;
+}
 
 
 
