@@ -21,9 +21,12 @@ Sunset: #f2cc8f
     --white:white;
     --pink:rgb(212, 15, 81);
     --white2:#ffffff;
-    --teal-heading:#81b29a;
-    --background:#050f1f;
+    --teal-heading:rgb(239,240,243);
+    --background:rgb(200,224,254);
     --crimson:crimson;
+    --black:#000000;
+    --green:#154734;
+    
   }
   
   body {
@@ -82,8 +85,8 @@ Sunset: #f2cc8f
       text-decoration: none;
       padding: 0.25em;
       margin: 0.5em;
-      background-color: var(--light-two);
-      color: var(--dark-one);
+      /* background-color: var(--green); */
+      color: var(--white);
   
       
       
@@ -95,13 +98,13 @@ Sunset: #f2cc8f
   
   nav a:visited {
   
-      color: var(--dark-three);
+      color: #008080;
   
     
     }
 
   nav a:hover{
-    color: var(--crimson);
+    color: var(--background);
   }
   
   main {
@@ -120,7 +123,7 @@ Sunset: #f2cc8f
       
       font-size: 3em;
       padding: 0.15em 0.75em;
-      color: var(--teal-heading);
+      color: var(--black);
       text-align: center;
       margin-top: 5em;
       
@@ -129,7 +132,7 @@ Sunset: #f2cc8f
     
     main #home p {
       padding:  1em 4em;
-      color: var(--white2);
+      color: var(--black);
       font-weight: bold;
       margin-bottom: 35em;
       text-align: center;
@@ -142,7 +145,7 @@ Sunset: #f2cc8f
       align-items: center;
       justify-content: center;
       background-color: var(--light-two);
-      color: var(--dark-one);
+      color: var(--black);
       margin-bottom: 35em;
 
       
@@ -169,7 +172,7 @@ Sunset: #f2cc8f
     main #aboutMe h1 {
       text-align: center;
       grid-column: 1 / span 2;
-      color: var(--pink);
+      color: var(--black);
       font-size: 2em;
       border-bottom: 3em;
     
@@ -179,7 +182,7 @@ Sunset: #f2cc8f
     main #aboutMe p {
       grid-column: 2;
       margin-bottom: 5em;
-      color: var(--white);
+      color: var(--black);
 
 
     }
@@ -232,24 +235,35 @@ Sunset: #f2cc8f
         margin-bottom: 15em;
         font-size: 1em;
     }
+    table img{
+      height: 20em;
+      width: 20em;
+    }
     
     th, td {
         border: 1em solid var(--extra1);
         padding: 1em;
-        text-align: left;
+        text-align: center;
+        vertical-align: middle;
     }
     
     th {
-        background-color: var(--light-two);
-        color: var(--dark-one);
+        background-color: var(--teal-heading);
+        color: var(--black);
     }
+    td img:hover {
+      transform: scale(1.1); /* Zoom effect on hover */
+  }
     
     tr:nth-child(even) {
-        background-color: var(--light-one);
+        background-color: #F5F5F5;
     }
     tr:nth-child(odd) {
-      background-color: var(--dark-three);
+      background-color: #FFDAB9;
+
+    
   }
+
     
     /* Section Styles */
     section#projects {
